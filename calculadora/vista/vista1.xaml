@@ -15,11 +15,11 @@
 
             <Picker x:Name="pkAlumnos" Title="Picker Estudiante" TextColor="Red">
                 <Picker.Items>
-                    <x:String>Angel</x:String> 
-                    <x:String>Alumno 2</x:String>
-                    <x:String>Alumno 3</x:String>
-                    <x:String>Alumno 4</x:String>
-                    <x:String>Alumno 5</x:String>
+                    <x:String>Angel Teran</x:String> 
+                    <x:String>Javier Teran</x:String>
+                    <x:String>Angel Gualpa</x:String>
+                    <x:String>Javier Gualpa</x:String>
+                    <x:String>Alumno prueba</x:String>
                 </Picker.Items>
             </Picker>
 
