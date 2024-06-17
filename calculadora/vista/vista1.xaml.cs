@@ -2,9 +2,10 @@ namespace calculadora.vista;
 
 public partial class vista1 : ContentPage
 {
-    public vista1()
+    public vista1( string usuario)
     {
         InitializeComponent();
+        lblNombre.Text ="Bienvenido : " +usuario;
     }
 
     private void btnCalcular_Clicked(object sender, EventArgs e)

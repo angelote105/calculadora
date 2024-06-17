@@ -7,39 +7,68 @@
         <VerticalStackLayout>
 
             <Label 
-        Text="SISTEMA DE CALIFICACIONES"
-        VerticalOptions="Center" 
-        HorizontalOptions="Center" />
+                Text="SISTEMA DE CALIFICACIONES"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label x:Name="lblNombre" 
+               HorizontalTextAlignment="Center"
+               FontSize="15"
+               TextColor="DarkGray"
+            />
 
-            <Label Text="PARCIAL 1" TextColor="Green"/>
+            <Grid Margin="20,35,20,20" >
+               
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="400" />
+                    <ColumnDefinition Width="400" />
 
-            <Picker x:Name="pkAlumnos" Title="Picker Estudiante" TextColor="Red">
-                <Picker.Items>
-                    <x:String>Angel Teran</x:String> 
-                    <x:String>Javier Teran</x:String>
-                    <x:String>Angel Gualpa</x:String>
-                    <x:String>Javier Gualpa</x:String>
-                    <x:String>Alumno prueba</x:String>
-                </Picker.Items>
-            </Picker>
-
-            <Entry x:Name="txtNS1" Placeholder="Ingrese Nota Seguimiento" Keyboard="Numeric" MaxLength="10" PlaceholderColor="Blue" BackgroundColor="BurlyWood"/>
-            <Entry x:Name="txtNE1" Placeholder="Ingrese Nota Examen" Keyboard="Numeric" MaxLength="10" PlaceholderColor="Blue" BackgroundColor="BurlyWood"/>
-
-            <Label Text="PARCIAL 2" TextColor="Green"/>
-
-            <Entry x:Name="txtNS2" Placeholder="Ingrese Nota Seguimiento 2" Keyboard="Numeric" MaxLength="10" PlaceholderColor="Blue" BackgroundColor="BurlyWood"/>
-            <Entry x:Name="txtNE2" Placeholder="Ingrese Nota Examen 2" Keyboard="Numeric" MaxLength="10" PlaceholderColor="Blue" BackgroundColor="BurlyWood"/>
+                </Grid.ColumnDefinitions>
 
 
-            <Label Text="Nota Final" BackgroundColor="RosyBrown"/>
-            <Label Text=" Nota 1 + Nota 2"/>
+                <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="0" />
+                <BoxView BackgroundColor="White" Grid.Column="1" Grid.Row="0" />
+                <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="1"/>
+                <BoxView BackgroundColor="White" Grid.Column="1" Grid.Row="1"/>
+                <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="2"/>
+                <BoxView BackgroundColor="White" Grid.Column="1" Grid.Row="2"/>
+                <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="3"/>
+                <BoxView BackgroundColor="White" Grid.Column="1" Grid.Row="3"/>
 
-            <DatePicker x:Name="dpFecha" Format="MM/dd/yyyy">
+                <Picker x:Name="pkAlumnos" Title="Listado de Estudiantes" TextColor="Blue" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" TitleColor="Red">
+                    <Picker.Items>
+                        <x:String>Angel Teran</x:String>
+                        <x:String>Javier Teran</x:String>
+                        <x:String>Angel Gualpa</x:String>
+                        <x:String>Javier Gualpa</x:String>
+                        <x:String>Alumno prueba</x:String>
+                    </Picker.Items>
+                </Picker>
 
-            </DatePicker>
+                <Label Text="Parcial 1" TextColor="Green" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                <Entry x:Name="txtNS1" Placeholder="Ingrese Nota Seguimiento 1"  Keyboard="Numeric"       MaxLength="10"        PlaceholderColor="Blue"          Grid.Column="0" Grid.Row="3"/>
+                <Entry x:Name="txtNE1" Placeholder="Ingrese Nota Examen 2"       Keyboard="Numeric"       MaxLength="10"        PlaceholderColor="Blue"          Grid.Column="1" Grid.Row="3"/>
+                <Label Text="Parcial 2" TextColor="Green" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+                <Entry x:Name="txtNS2" Placeholder="Ingrese Nota Seguimiento 2"  Keyboard="Numeric"       MaxLength="10"        PlaceholderColor="Blue"         Grid.Column="0" Grid.Row="5"/>
+                <Entry x:Name="txtNE2" Placeholder="Ingrese Nota Examen 2"       Keyboard="Numeric"       MaxLength="10"        PlaceholderColor="Blue"         Grid.Column="1" Grid.Row="5"/>
 
-            <Button x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" BackgroundColor="Blue" TextColor="White"/>
+                <DatePicker x:Name="dpFecha" Format="MM/dd/yyyy"                                                                                                 Grid.Column="0" Grid.Row="6"        Grid.ColumnSpan="2"></DatePicker>
+
+                <Button x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" BackgroundColor="Black" TextColor="White"                             Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2"/>
+
+
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>

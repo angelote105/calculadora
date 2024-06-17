@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadora.vista.registrar"
+             Title="registrar">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+        <Label 
+            Text="Registro de usuario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Grid Margin="20,35,20,20">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400" />
+                
+            </Grid.ColumnDefinitions>
+
+
+            <BoxView BackgroundColor="Silver" Grid.Column="0" Grid.Row="0" />
+            <BoxView BackgroundColor="Silver" Grid.Column="0" Grid.Row="1"/>
+            <BoxView BackgroundColor="Silver" Grid.Column="0" Grid.Row="2"/>
+            <BoxView BackgroundColor="Silver" Grid.Column="0" Grid.Row="3"/>
+
+            <Entry x:Name="txtNusuario" Grid.Column="0" Grid.Row="0" Placeholder="Ingrese el usuario" PlaceholderColor="Black" />
+            <Entry x:Name="txtNcontrasena" Grid.Column="0" Grid.Row="1" Placeholder="Ingrese la contraseña" PlaceholderColor="Black"/>
+            <Entry x:Name="txtCcontrasena" Grid.Column="0" Grid.Row="2" Placeholder="Ingrese la contraseña" PlaceholderColor="Black"/>
+            <Button Text="Registrar" x:Name="btn_registrar" Clicked="btn_registrar_Clicked" TextColor="White" Grid.Column="0" Grid.Row="3" BackgroundColor="Black"/>
+
+        </Grid>
+
+
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

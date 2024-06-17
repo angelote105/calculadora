@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new vista.vista1();
+            MainPage = new NavigationPage(new vista.login());
         }
     }
 }

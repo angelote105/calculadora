@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadora.vista.login"
+             Title="login">
+    <VerticalStackLayout
+        
+        Spacing="20"
+        Margin="20"
+        >
+        <Label 
+            Text="Inicio de sesion" 
+            HorizontalTextAlignment="Center"
+            FontSize="15"
+            TextColor="Black"/>
+
+     
+
+        <Image Source="login.jpg" 
+            WidthRequest="250"
+            
+            />
+
+        <Entry x:Name="txtUsuario"
+               Placeholder="Ingrese el usuario"
+               />
+        <Entry x:Name="txtContraseña"
+               Placeholder="Ingrese la contraseña"
+               IsPassword="True"
+            />
+
+        <Button x:Name="Inicio" Text="Iniciar Sesion" Clicked="Inicio_Clicked" BackgroundColor="Black"/>
+
+
+        <Button x:Name="Registro" Text="Registrar Usuario" Clicked="Registro_Clicked" BackgroundColor="Black"/>
+    </VerticalStackLayout>
+</ContentPage>
